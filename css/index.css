@@ -1,3 +1,8 @@
+@import url(https://fonts.googleapis.com/earlyaccess/hanna.css);
+.hanna * {
+ font-family: 'Hanna', fantasy;
+}
+
 /* 메인 페이지 */
 #mainBg {
     width: 100%;
@@ -20,6 +25,7 @@
 
 #mainLogo {
     font-size: 60px;
+    font-family: 'Hanna';
 }
 
 #mainBtnDiv {
@@ -107,4 +113,8 @@
     margin: 20px;
     float: right;
     cursor: pointer;
+}
+
+#mainModalElem #mainModalHead i span{
+    font-family: 'Hanna';
 }
