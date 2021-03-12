@@ -1,0 +1,110 @@
+/* 메인 페이지 */
+#mainBg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+#mainLoginHeader {
+    position: absolute;
+    padding: 20px;
+    width: 500px;
+    color: #222;
+    font-weight: 600;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#mainLogo {
+    font-size: 60px;
+}
+
+#mainBtnDiv {
+    margin-top: 10px;
+}
+
+#mainLoginHeader button{
+    background: transparent;
+    border: none;
+    position: relative;
+    height: 40px;
+    font-size: 18px;
+    width: 130px;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+}
+
+#mainLoginHeader button:hover{
+    background: transparent;
+    color: #222;
+}
+
+#mainLoginHeader button:before,button:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 4px;
+    width: 0;
+    background: #222;
+    transition: 400ms ease all;
+}
+
+#mainLoginHeader button:after{
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+#mainLoginHeader button:hover:before,button:hover:after{
+    width: 100%;
+    transition: 800ms ease all;
+}
+
+#mainBtnDiv #mainSignInBtn span,
+#mainBtnDiv #mainSingUpBtn span,
+#mainBtnDiv #mainGuestBtn span{
+    margin-left: 8px;
+}
+
+/* 메인 페이지 모달 */
+#mainModalBg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;  
+}
+
+#mainModalElem {
+    width: 500px;
+    height: 600px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -250%);
+    transition: transform 0.5s linear;
+}
+
+#mainModalElem.modalOpen {
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s linear;
+}
+
+#mainModalElem.modalClose {
+    transform: translate(-50%, -250%);
+    transition: transform 0.5s linear;
+}
+
+#mainModalElem #mainModalHead i {
+    font-size: 25px;
+    margin: 20px;
+    float: right;
+    cursor: pointer;
+}

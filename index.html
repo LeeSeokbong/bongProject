@@ -1,17 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width = device-width", initial-scale="1">
+  <title>Bong Projects</title>
 </head>
 <body>
-     
-     <button id="test">파이어베이스 테스트</button>
-</body>
-</html>
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+  <img id="mainBg" src="img/mainBg.png">
+  <div id="mainLoginHeader">
+    <span id="mainLogo">Bong Projects</span>
+    <div id="mainBtnDiv">
+      <button id="mainSignInBtn">
+        <i class="fas fa-sign-in-alt">
+          <span>로그인</span>
+        </i>
+      </button>
+      <button id="mainSingUpBtn">
+        <i class="fas fa-user-plus">
+          <span>회원가입</span>
+        </i>
+      </button>
+      <button id="mainGuestBtn">
+        <i class="fas fa-child">
+          <span>게스트</span>
+        </i>
+      </button>
+    </div>
+  </div>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
+<!-- Modal -->
+<div id="mainModal" class="modal-wrapper">
+  <div id="mainModalBg" class="hide"></div>
+  <div id="mainModalElem">
+    <div id= "mainModalHead">
+      <a id="mainModalCloseBtn">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </a>
+    </div>
+    <div id="mainModalContent">
+        
+    </div>
+  </div>
+</div>
+
+  <button id="test">파이어베이스 테스트</button>
+<!-- 파이어 베이스 CDN -->
+<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
 <script>
@@ -31,4 +70,7 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
-<script src="index.js"></script>
+<!-- 파이어 베이스 CDN 끝 -->
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
