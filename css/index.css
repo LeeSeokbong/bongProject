@@ -108,13 +108,23 @@
     transition: transform 0.5s linear;
 }
 
-#mainModalElem #mainModalHead i {
-    font-size: 25px;
+#mainModalHead {
+    height: 60px;
+}
+
+#mainModalHead i {
+    font-size: 20px;
     margin: 20px;
     float: right;
     cursor: pointer;
 }
 
-#mainModalElem #mainModalHead i span{
+#mainModalHead i span{
     font-family: 'Hanna';
+}
+
+#mainModalContent {
+    font-size: 18px;
+    font-family: 'Hanna';
+    margin: 20px;
 }
