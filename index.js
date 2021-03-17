@@ -58,9 +58,10 @@ function mainModalSign(mainModalType) {
     signPasswordElem.appendChild(signPasswordInput);
     //로그인 상황
     if(mainModalType === "signIn") {
+        var mainModalBtn = document.querySelector("#mainModalBtn")
         var signInBtn = document.createElement("button");
         signInBtn.textContent = "로그인"
-        signPasswordElem.appendChild(signInBtn);
+        mainModalBtn.appendChild(signInBtn);
         signInBtn.addEventListener ("click", function () {
             var signEmailValue = signEmailInput.value;
             var signPasswordValue = signPasswordInput.value;
@@ -85,19 +86,10 @@ function mainModalSign(mainModalType) {
         //회원가입 상황
     } else if (mainModalType === "signUp") {
         // 회원가입때만 패스워드 Elem 생성
-        var signNameElem = document.createElement("div");
-        signNameElem.setAttribute("id", "signNameElem");
-        mainModalContent.appendChild(signNameElem);
-
-        var signNameText = document.createElement("span");
-        signNameText.textContent = "이름"
-        signNameElem.appendChild(signNameText);
-        var signNameInput = document.createElement("input");
-        signNameElem.appendChild(signNameInput);
-
+        var mainModalBtn = document.querySelector("#mainModalBtn")
         var signUpBtn = document.createElement("button");
         signUpBtn.textContent = "회원가입"
-        signPasswordElem.appendChild(signUpBtn);
+        mainModalBtn.appendChild(signUpBtn);
         signUpBtn.addEventListener ("click", function () {
             var signEmailValue = signEmailInput.value;
             var signPasswordValue = signPasswordInput.value;
@@ -127,6 +119,7 @@ function mainModalClose() {
     mainModalBg.classList.add("hide")
     mainModalElem.classList.remove("modalOpen")
     mainModalElem.classList.add("modalClose")
+    mainModalBtn.innerHTML = ""
     setTimeout (function() {
         mainModalElem.classList.remove("modalClose")
     },500);

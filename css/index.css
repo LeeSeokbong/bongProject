@@ -32,7 +32,7 @@
     margin-top: 10px;
 }
 
-#mainLoginHeader button{
+#mainLoginHeader #mainBtnDiv button{
     background: transparent;
     border: none;
     position: relative;
@@ -45,37 +45,36 @@
     outline: none;
 }
 
-#mainLoginHeader button:hover{
+#mainLoginHeader #mainBtnDiv button:hover{
     background: transparent;
     color: #222;
 }
 
-#mainLoginHeader button:before,button:after{
+#mainLoginHeader #mainBtnDiv button:before,button:after{
     content: '';
     position: absolute;
     top: 0;
     right: 0;
-    height: 4px;
+    height: 2px;
     width: 0;
     background: #222;
     transition: 400ms ease all;
 }
 
-#mainLoginHeader button:after{
+#mainLoginHeader #mainBtnDiv button:after{
     right: inherit;
     top: inherit;
     left: 0;
     bottom: 0;
 }
 
-#mainLoginHeader button:hover:before,button:hover:after{
+#mainLoginHeader #mainBtnDiv button:hover:before,
+#mainLoginHeader #mainBtnDiv button:hover:after{
     width: 100%;
     transition: 800ms ease all;
 }
 
-#mainBtnDiv #mainSignInBtn span,
-#mainBtnDiv #mainSingUpBtn span,
-#mainBtnDiv #mainGuestBtn span{
+#mainBtnDiv #mainBtnDiv span{
     margin-left: 8px;
 }
 
@@ -89,23 +88,25 @@
 
 #mainModalElem {
     width: 500px;
-    height: 600px;
+    height: 250px;
     background-color: #fff;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -250%);
-    transition: transform 0.5s linear;
+    border: solid 1px #999;
+    box-shadow: 4px 4px 3px #666;
+    transform: translate(-50%, -400%);
+    transition: transform 0.3s linear;
 }
 
 #mainModalElem.modalOpen {
     transform: translate(-50%, -50%);
-    transition: transform 0.5s linear;
+    transition: transform 0.3s linear;
 }
 
 #mainModalElem.modalClose {
-    transform: translate(-50%, -250%);
-    transition: transform 0.5s linear;
+    transform: translate(-50%, -400%);
+    transition: transform 0.3s linear;
 }
 
 #mainModalHead {
@@ -115,6 +116,7 @@
 #mainModalHead i {
     font-size: 20px;
     margin: 20px;
+    color: #222;
     float: right;
     cursor: pointer;
 }
@@ -127,4 +129,40 @@
     font-size: 18px;
     font-family: 'Hanna';
     margin: 20px;
+}
+
+#signNameElem,
+#signPasswordElem {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#mainModalContent span {
+    line-height: 28px;
+}
+
+#mainModalContent input{
+    width: 300px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+#mainModalContent input:focus {
+    outline: none;
+}
+
+#mainModalBtn {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+#mainModalBtn button {
+    padding: 10px;
+    border-radius: 7px;
+    background-color: #333;
+    border: 2px solid #333;
+    color: #fff;
 }
