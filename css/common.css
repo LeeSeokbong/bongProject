@@ -1,0 +1,44 @@
+#toastElem {
+    width: 250px;
+    max-height: 95%;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    overflow: hidden;
+}
+
+#toast {
+    width: 250px;
+    height: 100px;
+    border: 1px solid;
+    opacity: 1;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 4px 4px 3px #666;
+}
+
+#toast.toastOpen {
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+
+#toast.error-toast {
+    background-color: red;
+    color: white;
+}
+
+#toast.success-toast {
+    background-color: aquamarine;
+    color: #222;
+}
+
+body input:focus {
+    outline: none;
+}
+
+body button:focus {
+    outline: none;
+}

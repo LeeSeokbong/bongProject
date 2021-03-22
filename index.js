@@ -67,18 +67,16 @@ function mainModalSign(mainModalType) {
             var signPasswordValue = signPasswordInput.value;
             // 간단한 유효성검사
             if(signEmailValue === "") {
-                alert("이메일을 입력해주세요.");
+                errorToast(loginEmailError)
             } else if(signPasswordValue === "") {
-                alert("비밀번호를 입력해주세요.");
+                errorToast(loginPasswordError);
             } else {
                 firebase.auth().signInWithEmailAndPassword(signEmailValue, signPasswordValue)
                 .then(function() {
-                    alert("로그인 성공!");
                     location.replace("html/home.html");
                 })
                 .catch(function(e) {
-                    alert("에러 :" + e + "라고합니다.");
-                    console.log(e)
+                    errorToast(errorMsg + e);
                     return;
                 });
             }
@@ -95,18 +93,17 @@ function mainModalSign(mainModalType) {
             var signPasswordValue = signPasswordInput.value;
             // 간단한 유효성검사
             if(signEmailValue === "") {
-                alert("이메일을 입력해주세요.");
+                errorToast(loginEmailError)
             } else if(signPasswordValue === "") {
-                alert("비밀번호를 입력해주세요.");
+                errorToast(loginPasswordError);
             } else {
                 firebase.auth().createUserWithEmailAndPassword(signEmailValue, signPasswordValue)
                 .then(function() {
-                alert("회원가입 성공!");
+                successToast(successSingup)
                 mainModalClose();
                 })
                 .catch(function(e) {
-                    alert("에러");
-                    console.log(e)
+                    errorToast(errorMsg + e);
                     return;
                 });
             }

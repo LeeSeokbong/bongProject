@@ -1,57 +1,63 @@
-// 로그아웃
-var mainLogout = document.querySelector("#mainLogout");
-// 회원가입 버튼 클릭
-mainLogout.addEventListener("click", function () {
-    firebase.auth().signOut()
-            .then(function() {
-                alert("로그아웃");
-                location.replace("../index.html");
-            })
-            .catch(function(e) {
-                alert("에러");
-                console.log(e)
-                return;
-            });
-})
-
-
-
-var signNameInput = document.querySelector("#signNameInput");
 var user = firebase.auth().currentUser;
-var nameSave = document.querySelector("#nameSave")
-nameSave.addEventListener("click", function(){
-    var user = firebase.auth().currentUser;
-
-user.updateProfile({
-  displayName: signNameInput.value
-}).then(function() {
-    console.log("성공")
-  console.log(user.displayName)
-  console.log(user.email)
-}).catch(function(error) {
-    console.log("실패")
-    console.log(user.displayName)
-    console.log(user.email)
-});
-})
-
 firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-        var name, email, photoUrl, uid, emailVerified;
-        if (user != null) {
-            name = user.displayName;
-            email = user.email;
-            photoUrl = user.photoURL;
-            emailVerified = user.emailVerified;
-            uid = user.uid;  // The user's ID, unique to the Firebase project. Do NOT use
-                             // this value to authenticate with your backend server, if
-                             // you have one. Use User.getToken() instead.
-                             var test = document.querySelector("#test");
-                             console.log(user)
-          }
+    if (user) { 
+        // 이름 저장이 없을 때
+        if(user.displayName === null){
+            var whatName = document.querySelector("#whatName");
+            var signNameInput = document.querySelector("#signNameInput");
+            var nameSave = document.querySelector("#nameSave")
+            // 최초 진입 시 페이드 인
+            whatName.classList.add("open");
+            nameSave.addEventListener("click", function(){
+                // 이름 저장 후 페이드 아웃
+                whatName.classList.add("close");
+                // 이름 저장 후 div 삭제
+                setTimeout(function(){
+                    whatName.remove();
+                }, 3000)
+            user.updateProfile({
+                displayName: signNameInput.value
+            })
+        // 이름 저장 후 인사 한 번
+        var welcomeName = document.querySelector("#welcomeName");
+        welcomeName.classList.add("open");
+        var welcomeHello = document.querySelector("#welcomeHello");
+        welcomeHello.textContent = signNameInput.value;
+        //인사 끝
+        setTimeout(function(){
+            welcomeName.classList.add("close");
+            // 인사 div 삭제
+            setTimeout(function(){
+                welcomeName.remove();
+                location.replace("../html/menu.html");
+            },3000)
+        },3000)
+    })
+        } else {
+            // 이름 있으면 그냥 들여보내~
+            location.replace("../html/menu.html");
+        }
+        var test = document.querySelector("#test");
+        test.textContent = user.displayName
+        console.log(user)
     } else {
-      console.log("없음")
+    alert("다시 로그인하세요.")
+    location.replace("../index.html");
     }
-  });
+});
 
-
+// 로그아웃
+// var mainLogout = document.querySelector("#mainLogout");
+// // 로그아웃 버튼 클릭
+// mainLogout.addEventListener("click", function () {
+//     firebase.auth().signOut()
+//             .then(function() {
+//                 alert("로그아웃");
+//                 location.replace("../index.html");
+//             })
+//             .catch(function(e) {
+//                 alert("에러");
+//                 console.log(e)
+//                 return;
+//             });
+// })

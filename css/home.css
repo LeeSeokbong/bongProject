@@ -1,0 +1,74 @@
+#whatName {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+}
+
+#whatName.open {
+    opacity: 1;
+    transition: opacity 1s linear;
+}
+
+#whatName.close {
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+
+#whatName h1 {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+#whatName input{
+    width: 300px;
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 40px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+#whatName button{
+    border: 0;
+    background-color: transparent;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+#whatName i {
+    font-size: 20px;
+    color: #666;
+}
+
+#welcomeName {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+}
+
+#welcomeName.open {
+    opacity: 1;
+    transition: opacity 1s linear;
+}
+
+#welcomeName.close {
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+
+#welcomeName h1 {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+#welcomeName #welcomeHello {
+    font-size: 80px;
+}
