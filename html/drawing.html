@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="../css/intro.css">
+  <link rel="stylesheet" href="../css/drawing.css">
   <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/main-header.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
@@ -14,23 +15,29 @@
   <title>Bong Projects</title>
 </head>
 <body>
-  <div id="whatName">
-    <h1>아직 등록된 이름이 없군</h1>
-    <h1>자네 이름이 뭔가?</h1>
-    <input id="signNameInput">
-    <button id="nameSave">입니다.
-      <i class="fas fa-sign-in-alt"></i>
-    </button>
-  </div>
-  <div id="welcomeName">
-    <h1>반갑네,</h1>
-    <h1 id="welcomeHello"></h1>
-    <h1>이제 들어가도록 허락하지</h1>
-  </div>
-    <div id="test"></div>
-    <button id="toasttest">토스트</button>
+  <div class="logo">Bong Projects</div>
+    <ul class="nav nav-pills">
+      <li role="presentation"><a href="../html/home.html">Home</a></li>
+      <li role="presentation"><a href="../html/profile.html">Profile</a></li>
+      <li role="presentation" class="active"><a href="#">Drawing</a></li>
+      <div class="header-info">
+        <span id="userDisplayName"></span>
+        <button id="mainLogout">로그아웃</button>
+      </div>
+    </ul>
+    <div>
+        <span>width</span>
+        <input id="canvasWidth">
+        <span>height</span>
+        <input id="canvasHeight">
+        <button id="canvasSizeSaveBtn">save</button>
+    </div>
+    <div id="canvasElem">
+        <canvas id="canvas" style="background-color:aliceblue"></canvas>
+    </div>
 </body>
 </html>
 <script type="text/javascript" src="../js/firebase.js"></script>
 <script type="text/javascript" src="../js/common.js"></script> 
-<script type="text/javascript" src="../js/intro.js"></script>
+<script type="text/javascript" src="../js/header.js"></script>
+<script type="text/javascript" src="../js/drawing.js"></script>
