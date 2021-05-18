@@ -1,9 +1,9 @@
 var database = firebase.database();
-var btn = document.querySelector("#test");
+var btn = document.querySelector("#test123");
 btn.onclick = function () {
     console.log("hihi");
     var dbRefObject = firebase.database().ref();
-    dbRefObject.child("object").push({"id": "3"});
+    // dbRefObject.child("object").push({"id": "3"});
     database.ref('test/2/').set({"name": "아하하", "intro": "오호호"})
 }
 
@@ -73,7 +73,7 @@ function mainModalSign(mainModalType) {
             } else {
                 firebase.auth().signInWithEmailAndPassword(signEmailValue, signPasswordValue)
                 .then(function() {
-                    location.replace("html/home.html");
+                    location.replace("html/intro.html");
                 })
                 .catch(function(e) {
                     errorToast(errorMsg + e);
