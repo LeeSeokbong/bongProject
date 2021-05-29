@@ -6,4 +6,6 @@
 #canvas {
     margin-top: 50px;
     border: 1px solid;
+    width: 400px;
+    height: 400px;
 }
