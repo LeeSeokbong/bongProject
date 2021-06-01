@@ -4,14 +4,23 @@ var canvasSizeSaveBtn = document.querySelector("#canvasSizeSaveBtn");
 canvasSizeSaveBtn.addEventListener("click", function(){
     var canvasWidthValue = document.querySelector("#canvasWidth").value;
     var canvasHeightValue = document.querySelector("#canvasHeight").value;
-    canvas.style.width = canvasWidthValue + "px";
-    canvas.style.height = canvasHeightValue + "px";
-    
+    canvas.setAttribute("width", canvasWidthValue);
+    canvas.setAttribute("height", canvasHeightValue);
 })
 
 context = canvas.getContext('2d'); 
 context.lineWidth = 2; // 선 굵기를 2로 설정
-// context.strokeStyle = "blue";
+context.strokeStyle = "black";
+
+canvasPointSaveBtn.addEventListener("click", function(){
+    var canvasPoint = document.querySelector("#canvasPoint");
+    context.lineWidth = canvasPoint.value;
+})
+
+canvasColorSaveBtn.addEventListener("click", function(){
+    var canvasColor = document.querySelector("#canvasColor");
+    context.strokeStyle = "#" + canvasColor.value;
+})
 
 // 마우스 리스너 등록. e는 MouseEvent 객체
 canvas.addEventListener("mousemove", function (e) { move(e) }, false);
@@ -39,3 +48,11 @@ function move(e) {
     startX = curX; startY = curY;
 }
 function out(e) { drawing = false; }
+
+var canvasDownload = document.querySelector("#canvasDownload");
+canvasDownload.addEventListener("click", function(event){
+    event.target.href = canvas.toDataURL("image/png")
+})
+
+
+    
