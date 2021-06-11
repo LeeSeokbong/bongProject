@@ -3,6 +3,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     if (user) { 
         var userDisplayName = document.querySelector("#userDisplayName");
         userDisplayName.textContent = user.displayName + "님";
+        userDisplayName.setAttribute("data-name", user.displayName)
     } else {
         //정보가 없으면 강제 로그아웃
         firebase.auth().signOut()

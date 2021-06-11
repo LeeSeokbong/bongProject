@@ -1,0 +1,18 @@
+#alacrityGameElem {
+    width: 502px;
+    height: 500px;
+    border: 1px solid;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.alacrityDiv {
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+}
+
+#gameRanking {
+    display: flex;
+}

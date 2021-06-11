@@ -2,10 +2,22 @@ var database = firebase.database();
 var btn = document.querySelector("#test123");
 btn.onclick = function () {
     console.log("hihi");
-    var dbRefObject = firebase.database().ref();
-    // dbRefObject.child("object").push({"id": "3"});
-    database.ref('test/2/').set({"name": "아하하", "intro": "오호호"})
+    var idTry = 1;
+    var dbRefObject = firebase.database();
+    dbRefObject.ref('game/' + idTry).set({"id": 2, "name": 1, "time": 4});
+    idTry ++
 }
+
+var dbRef = firebase.database().ref();
+dbRef.child("game/").get().then((snapshot) => {
+  if (snapshot.exists()) {
+    console.log(snapshot.val());
+  } else {
+    console.log("No data available");
+  }
+}).catch((error) => {
+  console.error(error);
+});
 
 // 로그인 버튼
 var mainSignInBtn = document.querySelector("#mainSignInBtn");

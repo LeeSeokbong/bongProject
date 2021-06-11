@@ -2,12 +2,13 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <link rel="stylesheet" href="../css/intro.css">
+  <link rel="stylesheet" href="../css/alacrityGame.css">
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/main-header.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- 파이어 베이스 CDN -->
   <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
@@ -19,17 +20,25 @@
   <div class="logo">Bong Projects</div>
     <ul class="nav nav-pills">
       <li role="presentation"><a href="../html/home.html">Home</a></li>
-      <li role="presentation" class="active"><a href="#">Profile</a></li>
       <li role="presentation"><a href="../html/drawing.html">Drawing</a></li>
       <li role="presentation"><a href="../html/lolAPI.html">lolAPI</a></li>
+      <li role="presentation" class="active"><a href="#">Alacrity Game</a></li>
       <div class="header-info">
         <span id="userDisplayName"></span>
         <button id="mainLogout">로그아웃</button>
       </div>
     </ul>
+    <div>Seconds: <span id="time"></span></div>
+        <input type="button" id="startTimer" value="Start Timer" onclick="start();"><br/>
+    <div id="alacrityGameElem" class="hide"></div>
+    <div id="gameRanking">
+      <span id="gameRankingBox"></span>
+      <span id="gameNameBox"></span>
+      <span id="gameTimeBox"></span>
+    </div>
 </body>
 </html>
 <script type="text/javascript" src="../js/firebase.js"></script>
 <script type="text/javascript" src="../js/common.js"></script> 
 <script type="text/javascript" src="../js/header.js"></script>
-<script type="text/javascript" src="../js/profile.js"></script>
+<script type="text/javascript" src="../js/alacrityGame.js"></script>
