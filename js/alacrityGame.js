@@ -26,7 +26,7 @@ function drawGame() {
         for(var j = 0; j < i; j++) {
             if (randomNum[i] === randomNum[j]) {
                 randomNum.pop();
-                i--;  
+                i--;
             }
         }
     }

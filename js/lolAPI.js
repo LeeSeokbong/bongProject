@@ -1,5 +1,5 @@
 
-var api_key = 'RGAPI-86039d0b-9734-40ca-8457-8171006e3ded'
+var api_key = 'RGAPI-ef2aa088-87cb-4b98-b88c-831902931a1c'
 var summonerSearchBtn = document.querySelector("#summonerSearchBtn");
 summonerSearchBtn.addEventListener("click", function (){
   var lolId = document.querySelector("#summoner").value
