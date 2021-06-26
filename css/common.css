@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'ImcreSoojin';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 #toastElem {
     width: 250px;
     max-height: 95%;
@@ -33,12 +40,4 @@
 #toast.success-toast {
     background-color: aquamarine;
     color: #222;
-}
-
-body input:focus {
-    outline: none;
-}
-
-body button:focus {
-    outline: none;
 }

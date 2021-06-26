@@ -1,11 +1,87 @@
-.logo {
-    font-size: 28px;
+@font-face {
+    font-family: 'ImcreSoojin';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#body {
+    background-color: #ebf8d4;
+}
+
+#logo {
     text-align: center;
-    margin-top: 8px;
+    margin-top: 60px;
+    padding-bottom: 30px;
 }
 
 body .nav-pills {
     padding: 20px;
+}
+
+#body input:focus {
+    outline: none;
+}
+
+#body button:focus {
+    outline: none;
+}
+
+.button-small,
+.button-big,
+.button-sub {
+    position: relative;
+}
+
+.button-small {
+    margin-right: 30px;
+}
+
+.button-small .button-text.drawing-btn{ 
+    font-family: ImcreSoojin;
+    color: #FFFFFF;
+    position: absolute;
+    top: -40%;
+    left: 18%;
+    font-size: 25px;
+}
+
+.button-small .button-text.lol-btn{ 
+    font-family: ImcreSoojin;
+    color: #FFFFFF;
+    position: absolute;
+    top: -40%;
+    left: 26%;
+    font-size: 25px;
+}
+
+.button-big .button-text.game-btn {
+    font-family: ImcreSoojin;
+    color: #FFFFFF;
+    position: absolute;
+    top: -40%;
+    left: 18%;
+    font-size: 25px;
+}
+
+.button-sub .button-text {
+    font-family: ImcreSoojin;
+    color: #AFD36D;
+    position: absolute;
+    top: -40%;
+    left: 20%;
+    font-size: 20px;
+}
+
+.menu {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 50px;
+}
+
+.menu a:focus,
+.menu a:hover {
+    text-decoration: none;
 }
 
 .header-info {
@@ -15,6 +91,17 @@ body .nav-pills {
 
 #mainLogout {
     border: none;
-    background-color: white;
-    color: red;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+#mainLogout img {
+    cursor: pointer;
+}
+
+#userDisplayName {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: white;
+    font-size: 20px;
+    font-family: 'ImcreSoojin';
 }

@@ -9,7 +9,7 @@ canvasSizeSaveBtn.addEventListener("click", function(){
 })
 
 context = canvas.getContext('2d'); 
-context.lineWidth = 2; // 선 굵기를 2로 설정
+context.lineWidth = 2;
 context.strokeStyle = "black";
 
 canvasPointSaveBtn.addEventListener("click", function(){
@@ -22,13 +22,11 @@ canvasColorSaveBtn.addEventListener("click", function(){
     context.strokeStyle = "#" + canvasColor.value;
 })
 
-// 마우스 리스너 등록. e는 MouseEvent 객체
 canvas.addEventListener("mousemove", function (e) { move(e) }, false);
 canvas.addEventListener("mousedown", function (e) { down(e) }, false);
 canvas.addEventListener("mouseup", function (e) { up(e) }, false);
 canvas.addEventListener("mouseout", function (e) { out(e) }, false);
 
- // 드래깅동안, 처음 마우스가 눌러진 좌표
 var drawing=false;
 function draw(curX, curY) {
     context.beginPath();

@@ -16,18 +16,32 @@
   <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-auth.js"></script>
   <title>Bong Projects</title>
 </head>
-<body>
-  <div class="logo">Bong Projects</div>
-    <ul class="nav nav-pills">
-      <li role="presentation"><a href="../html/home.html">Home</a></li>
-      <li role="presentation"><a href="../html/drawing.html">Drawing</a></li>
-      <li role="presentation" class="active"><a href="#">lolAPI</a></li>
-      <li role="presentation"><a href="../html/alacrityGame.html">Alacrity Game</a></li>
-      <div class="header-info">
-        <span id="userDisplayName"></span>
-        <button id="mainLogout">로그아웃</button>
-      </div>
-    </ul>
+<body id="body">
+  <div id="logo">
+    <img src="../img/logo.png">
+  </div>
+  <div class="header-info">
+    <span id="userDisplayName"></span>
+    <a id="mainLogout" class="button-sub">
+      <img src="../img/subbutton.png">
+      <span class="button-text">Logout</span>
+    </a>
+  </div>
+  <div class="menu">
+    <a class="button-small" href="../html/drawing.html">
+      <img src="../img/button-small.png">
+      <span class="button-text drawing-btn">Drawing</span>
+    </a>
+    <a class="button-small" href="../html/lolAPI.html">
+      <img src="../img/button-small.png">
+      <span class="button-text lol-btn">lol API</span>
+    </a>
+    <a class="button-big" href="../html/alacrityGame.html">
+      <img src="../img/button-big.png">
+      <span class="button-text game-btn">Alacrity Game</span>
+    </a>
+  </div>
+  
     <div>
         <span>ID</span>
         <input id="summoner">
