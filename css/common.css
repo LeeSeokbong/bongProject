@@ -5,6 +5,16 @@
     font-style: normal;
 }
 
+#body {
+    background-color: #ebf8d4;
+}
+
+#logo {
+    text-align: center;
+    margin-top: 60px;
+    padding-bottom: 30px;
+}
+
 #toastElem {
     width: 250px;
     max-height: 95%;
@@ -40,4 +50,16 @@
 #toast.success-toast {
     background-color: aquamarine;
     color: #222;
+}
+
+.seoksun {
+    position: absolute;
+    top: 70%;
+    left: 10%;
+}
+
+.seokdol {
+    position: absolute;
+    top: 10%;
+    left: 80%;
 }

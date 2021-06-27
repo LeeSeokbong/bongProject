@@ -48,6 +48,7 @@ function mainModalSign(mainModalType) {
     signPasswordText.textContent = "비밀번호"
     signPasswordElem.appendChild(signPasswordText);
     var signPasswordInput = document.createElement("input");
+    signPasswordInput.setAttribute("type", "password")
     signPasswordElem.appendChild(signPasswordInput);
     //로그인 상황
     if(mainModalType === "signIn") {

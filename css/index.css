@@ -1,6 +1,8 @@
-@import url(https://fonts.googleapis.com/earlyaccess/hanna.css);
-.hanna * {
- font-family: 'Hanna', fantasy;
+@font-face {
+    font-family: 'ImcreSoojin';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* 메인 페이지 */
@@ -12,24 +14,29 @@
 }
 
 #mainLoginHeader {
+    width: 100%;
+    height: 100%;
+    padding-top: 20%;
     position: absolute;
-    padding: 20px;
-    width: 500px;
     color: #222;
     font-weight: 600;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    font-family: ImcreSoojin;
 }
 
 #mainLogo {
     font-size: 60px;
-    font-family: 'Hanna';
 }
 
 #mainBtnDiv {
     margin-top: 10px;
+}
+
+#mainBtnDiv span {
+    font-family: ImcreSoojin;
 }
 
 #mainLoginHeader #mainBtnDiv button{
@@ -87,13 +94,14 @@
 }
 
 #mainModalElem {
-    width: 500px;
+    width: 440px;
     height: 250px;
     background-color: #fff;
     position: absolute;
     top: 50%;
     left: 50%;
-    border: solid 1px #999;
+    border-radius: 10px;
+    border: solid 2px #AFD36D;
     box-shadow: 4px 4px 3px #666;
     transform: translate(-50%, -400%);
     transition: transform 0.3s linear;
@@ -122,12 +130,12 @@
 }
 
 #mainModalHead i span{
-    font-family: 'Hanna';
+    font-family: ImcreSoojin;
 }
 
 #mainModalContent {
     font-size: 18px;
-    font-family: 'Hanna';
+    font-family: ImcreSoojin;
     margin: 20px;
 }
 
@@ -136,6 +144,7 @@
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
+    font-family: ImcreSoojin;
 }
 
 #mainModalContent span {

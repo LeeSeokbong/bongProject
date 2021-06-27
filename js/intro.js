@@ -8,6 +8,17 @@ firebase.auth().onAuthStateChanged(function(user) {
             var nameSave = document.querySelector("#nameSave")
             // 최초 진입 시 페이드 인
             whatName.classList.add("open");
+            if(window.event.keyCode === 13) {
+                // 이름 저장 후 페이드 아웃
+                whatName.classList.add("close");
+                // 이름 저장 후 div 삭제
+                setTimeout(function(){
+                    whatName.remove();
+                }, 3000)
+            user.updateProfile({
+                displayName: signNameInput.value
+            })
+        }
             nameSave.addEventListener("click", function(){
                 // 이름 저장 후 페이드 아웃
                 whatName.classList.add("close");
@@ -29,13 +40,13 @@ firebase.auth().onAuthStateChanged(function(user) {
             // 인사 div 삭제
             setTimeout(function(){
                 welcomeName.remove();
-                location.replace("../html/home.html");
+                location.replace("../html/drawing.html");
             },3000)
         },3000)
     })
         } else {
             // 이름 있으면 그냥 들여보내~
-            location.replace("../html/home.html");
+            location.replace("../html/drawing.html");
         }
         var test = document.querySelector("#test");
         test.textContent = user.displayName

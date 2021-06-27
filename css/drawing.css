@@ -48,7 +48,9 @@
 }
 
 #drawingSetting button {
-    background-color: cadetblue;
+    background-color: #AFD36D;
+    color: white;
+    border: 0;
 }
 
 #canvasDownload {

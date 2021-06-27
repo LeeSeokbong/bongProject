@@ -72,3 +72,11 @@
 #welcomeName #welcomeHello {
     font-size: 80px;
 }
+
+#signNameInput {
+    background-color: #ebf8d4;
+}
+
+#signNameInput:focus-visible {
+    outline: none;
+}
