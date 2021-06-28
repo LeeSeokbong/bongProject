@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <link rel="stylesheet" href="../css/drawing.css">
+  <link rel="stylesheet" href="../css/lolAPI.css">
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/main-header.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -42,31 +42,38 @@
     </a>
   </div>
   
-    <div>
-        <span>ID</span>
+  <div id="lolBody">
+    <div id="lolBg">
+      <img src="../img/bg.png">
+    </div>
+    <div id="summonerElem">
+      <span id="lolIcon"></span>
+      <span>나의 소환사 아이디는</span>
         <input id="summoner">
-        <button id="summonerSearchBtn">Search</button>
+        <span>입니다.</span>
+        <button id="summonerSearchBtn">검색하기</button>
     </div>
-    <div>
-      <span>소환사 아이디 : </span>
-      <span id="lolId"></span>
-    </div>
-    <div>
-      <span>소환사 레벨 : </span>
-      <span id="lolLevel"></span>
-    </div>
-    <div>
-      <span>티어 : </span>
-      <span id="lolTier"></span>
-      <span id="lolLank"></span>
-      <span id="lolLeaguePoints"></span>
-    </div>
-    <div>
-      <span>승률 : </span>
-      <span id="lolTotalRate"></span>
-      <span id="lolWins"></span>
-      <span id="lolLosses"></span>
-      <span id="lolWinningRate"></span>
+    <div id="summonerInfo" class="hide">
+      <div id="summonerLevel">
+        <span>당신의 레벨은</span>
+        <span id="lolLevel"></span>
+        <span>입니다.</span>
+      </div>
+      <div id="summonerTier">
+        <span>현재 시즌 티어는</span>
+        <span id="lolTier"></span>
+        <span id="lolRank"></span>
+        <span id="lolLeaguePoints"></span>
+        <span>이고, </span>
+      </div>
+      <div id="summonerRate">
+        <span>현재 시즌 승률은</span>
+        <span id="lolTotalRate"></span>
+        <span id="lolWins"></span>
+        <span id="lolLosses"></span>
+        <span id="lolWinningRate"></span>
+        <span>입니다.</span>
+      </div>
     </div>
 </body>
 </html>
