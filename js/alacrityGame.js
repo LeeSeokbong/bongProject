@@ -48,7 +48,7 @@ function drawGame() {
 }
 
 function clickNumDiv(numElem, numDiv){
-    if(k === 2) {
+    if(k === 24) {
         stop();
     }
     for(k; k < 25; k) {
@@ -112,7 +112,7 @@ function ranking(data) {
     gameTimeBox.innerHTML = "";
     for(var i = 1; i < 11; i++) {
         var rankingDiv = document.createElement("div")
-        rankingDiv.textContent = [i]+"등!"
+        rankingDiv.textContent = [i]+"등"
         gameRankingBox.appendChild(rankingDiv)
     }
     dbTestRef.orderByChild("time").limitToFirst(10).on('child_added', function(data){

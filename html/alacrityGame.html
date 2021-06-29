@@ -41,15 +41,16 @@
       <span class="button-text game-btn">Alacrity Game</span>
     </a>
   </div>
-
-    <div>Seconds: <span id="time"></span></div>
-        <input type="button" id="startTimer" value="Start Timer" onclick="start();"><br/>
-    <div id="alacrityGameElem" class="hide"></div>
-    <div id="gameRanking">
-      <span id="gameRankingBox"></span>
-      <span id="gameNameBox"></span>
-      <span id="gameTimeBox"></span>
-    </div>
+  <div id="gameHeader">
+    <button type="button" id="startTimer" onclick="start();">GAME START</button>
+    <div id="gameTimer">SCORE: <span id="time"></span></div>
+  </div>
+  <div id="alacrityGameElem" class="hide"></div>
+  <div id="gameRanking">
+    <span id="gameRankingBox"></span>
+    <span id="gameNameBox"></span>
+    <span id="gameTimeBox"></span>
+  </div>
 </body>
 </html>
 <script type="text/javascript" src="../js/firebase.js"></script>

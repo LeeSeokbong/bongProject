@@ -1,18 +1,83 @@
+@font-face {
+    font-family: 'ImcreSoojin';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 #alacrityGameElem {
+    font-family: 'ImcreSoojin';
     width: 502px;
     height: 500px;
-    border: 1px solid;
+    border: 1px solid #AFD36D;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+#gameHeader {
+    font-family: 'ImcreSoojin';
+    text-align: center;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+#gameHeader button {
+    margin-left: 20px;
+    background-color: #AFD36D;
+    color: white;
+    border-radius: 4px;
+    border: 5px solid #AFD36D;
+}
+
+#gameHeader #gameTimer {
+    margin-top: 30px;
 }
 
 .alacrityDiv {
     width: 100px;
     height: 100px;
-    border: 1px solid;
+    border: 1px solid #AFD36D;
+    font-size: 25px;
+    text-align: center;
+    line-height: 100px;
 }
 
 #gameRanking {
     display: flex;
+    font-family: 'ImcreSoojin';
+    justify-content: center;
+    border: 1px solid #AFD36D;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 17px;
+}
+
+#gameRankingBox {
+    text-align: center;
+    border-right: 1px solid #AFD36D;
+    padding-right: 10px;
+}
+
+#gameRankingBox div {
+    margin-bottom: 5px;
+}
+
+#gameNameBox {
+    text-align: center;
+    border-right: 1px solid #AFD36D;
+    padding: 0 10px;
+}
+
+#gameNameBox div {
+    margin-bottom: 5px;
+}
+
+#gameTimeBox {
+    margin-left: 10px;
+}
+
+#gameTimeBox div {
+    margin-bottom: 5px;
 }
